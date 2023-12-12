@@ -12,6 +12,8 @@ def main(now):
 
   load_dotenv()  # take environment variables from .env.
   actualVars = []
+  josh_due=44.64
+  cori_due=67.73
   for var in env_vars:
     actualVars.append(get_env(var))
 
@@ -38,13 +40,16 @@ def main(now):
   for friend in friends:
     name = friend["name"]
     id = friend["id"]
-    description = "Spotify for the month of " + month + "— Sent by Joe's Assistant Efron 🤵🏻‍♂️"
-    amount = 3.00
-    message = f"""Good news old sport!
+    description = "Phone bill for " + month + "— Sent by Kanoa's assistant Jeffrey"
+    if name == "cori":
+      amount == cori_due
+    else:
+      amount = josh_due
+    message = f"""Meow,
 
 I have successfully requested money from {name}.
 
-— Efron 🤵🏻‍♂️
+— Jeffrey
     """
     success = venmo.request_money(id, amount, description, telegram.send_message(message))
     if success:
