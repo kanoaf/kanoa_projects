@@ -3,6 +3,11 @@ def install(name):
     subprocess.call([sys.executable, '-m', 'pip', 'install', name])
 install("venmo-api")
 import os
+import sys
+import subprocess
+def install(name):
+    subprocess.call([sys.executable, '-m', 'pip', 'install', name])
+install("venmo-api")
 from venmo_api import Client, PaymentPrivacy
 from notifiers import get_notifier
 
