@@ -1,10 +1,12 @@
 from datetime import datetime
+import sys
 from utils import get_env, verify_env_vars, env_vars, get_env_vars, Telegram, Venmo
+def install(name):
+    subprocess.call([sys.executable, '-m', 'pip', 'install', name])
 install("dotenv")
 from dotenv import load_dotenv
 
-def install(name):
-    subprocess.call([sys.executable, '-m', 'pip', 'install', name])
+
 def main(now):
   load_dotenv()
   date = now.strftime("%B %d, %Y")
