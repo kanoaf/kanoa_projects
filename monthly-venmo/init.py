@@ -14,7 +14,6 @@ def main(now):
   actualVars = []
   josh_due=44.64
   cori_due=67.73
-  amount==0
   for var in env_vars:
     actualVars.append(get_env(var))
 
@@ -43,7 +42,7 @@ def main(now):
     id = friend["id"]
     description = "Phone bill for " + month + "— Sent by Kanoa's assistant Jeffrey"
     if name == "cori":
-      amount == cori_due
+      amount = cori_due
     else:
       amount = josh_due
     message = f"""Meow,
