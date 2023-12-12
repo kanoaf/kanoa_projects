@@ -4,7 +4,7 @@ import subprocess
 from utils import get_env, verify_env_vars, env_vars, get_env_vars, Telegram, Venmo
 def install(name):
     subprocess.call([sys.executable, '-m', 'pip', 'install', name])
-install("dotenv")
+install("python-dotenv")
 from dotenv import load_dotenv
 
 
