@@ -4,6 +4,7 @@ def install(name):
     subprocess.call([sys.executable, '-m', 'pip', 'install', name])
 install("venmo-api")
 install("notifiers")
+install("python-dotenv")
 import os
 import sys
 import subprocess
