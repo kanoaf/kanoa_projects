@@ -14,6 +14,7 @@ def main(now):
   actualVars = []
   josh_due=44.64
   cori_due=67.73
+  amount==0
   for var in env_vars:
     actualVars.append(get_env(var))
 
