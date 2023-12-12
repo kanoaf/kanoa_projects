@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 
 def main(now):
-  load_dotenv(dotenv_path='\kanoa_projects\monthlt-venmo\.env')
+  load_dotenv(dotenv_path='\kanoa_projects\monthly-venmo\.env')
   date = now.strftime("%B %d, %Y")
   time = now.strftime("%H:%M%p")
   print(f'🕘 Monthly health check running on {date} at {time}.\n')
